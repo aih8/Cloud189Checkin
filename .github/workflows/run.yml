@@ -7,15 +7,12 @@ on:
     types: started
   workflow_dispatch:
   schedule:
-    - cron: 55 15 * * *
+    - cron: 45 21 * * *
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     environment: user
     steps:
-      - name: 🔀 delay 300 seconds
-        run: sleep 300
-
       - name: 🔌 Check out code
         uses: actions/checkout@main
 
